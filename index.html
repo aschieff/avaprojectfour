@@ -9,14 +9,14 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
+    <h1>The Ultimate Rock, Paper, Scissors Game</h1>
     <main class="choice">
       <section class="pchoice">
         <h2>You choose . . .</h2>
         <div class="images">
-          <img id="r-img" src="svg/rock.svg" alt="hand as rock">
-          <img id="p-img" src="svg/paper.svg" alt="hand as paper">
-          <img id="s-img" src="svg/scissors.svg" alt="hand as scissors">
+          <img id="r-img" src="svg/rock.svg" alt="hand as rock" onclick="choice('rock')">
+          <img id="p-img" src="svg/paper.svg" alt="hand as paper" onclick="choice('paper')">
+          <img id="s-img" src="svg/scissors.svg" alt="hand as scissors" onclick="choice('scissors')">
         </div>
       </section>
       <section class="ochoice">
@@ -25,7 +25,7 @@
       </section>
     </main>
     <section class="scoreboard">
-      <h2 id="result">It's a Tie.</h2>
+      <h2 id="result"></h2>
       <div id="play" class="score">
         <p id="pscore">0</p>
         <p class="label">Player</p>
