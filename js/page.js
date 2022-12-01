@@ -1,3 +1,5 @@
+sessionStorage.wins = 0;
+sessionStorage.losses = 0;
 function choice(x) {
     sessionStorage.playerchoice=x;
 var y =Math.ceil(Math.random()*3);
@@ -40,4 +42,12 @@ else if (sessionStorage.result=="lose"){
 else if (sessionStorage.result=="tie"){
     document.getElementById("result").innerHTML="It's a tie. Try again.";
 }
+if (sessionStorage.result == "win") {
+    document.getElementById("result").innerHTML="You won!";
+    sessionStorage.wins++;
+    document.getElementById("pscore").innerHTML = sessionStorage.wins;
+}
+document.getElementById("result").innerHTML="You lose!";
+    sessionStorage.losses++;
+    document.getElementById("oscore").innerHTML = sessionStorage.losses;
 }
